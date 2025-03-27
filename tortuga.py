@@ -35,7 +35,7 @@ def treet(
         )
         # for draw N branches, you draw first branch, plus
         # N -1 branches, start from 1, and create range.
-        for i in range(1, branches):
+        for _ in range(1, branches):
             # draw the branches
             turtle_pointer.right(angle)
             treet(
