@@ -14,8 +14,10 @@ def treet(
     """Recursive function to draw tree.
     take angles, branch quanty and level of recursiviti
     """
+    # @todo rewrite the colors_list in object to fix "to many argument"
     if colors_list is None:
         colors_list = ["Green", "Blue"]
+    # take the size of colors_list, and take as module in the order number
     color_id = order % len(colors_list)
     turtle_pointer.pendown()
     if order > 0:
@@ -31,6 +33,8 @@ def treet(
             order - 1,
             colors_list
         )
+        # for draw N branches, you draw first branch, plus
+        # N -1 branches, start from 1, and create range.
         for i in range(1, branches):
             # draw the branches
             turtle_pointer.right(angle)
@@ -47,6 +51,7 @@ def treet(
     else:
         turtle_pointer.color(colors_list[color_id])
         turtle_pointer.stamp()
+        # "remove" the pen from the "canvas" to avoid color overwrite
         turtle_pointer.penup()
 
 
