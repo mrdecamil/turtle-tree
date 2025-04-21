@@ -1,5 +1,6 @@
 import turtle
 import random
+import tortuga
 
 def koch(t, order, size):
   if order == 0:
@@ -20,7 +21,8 @@ window.bgcolor("white")
 colors = ("blue", "red", "white", "purple")
 t = turtle.Turtle()
 t.speed(0)
-t.color("color string: %s" % str(colors)")
+# t.color("color string: %s" % str(colors)")")
+tortuga.treet(t, 80, 3, 30, 3, colors)
 
 t.penup()
 t.goto(-150, 90)
